@@ -1,0 +1,10 @@
+javascript:(function() {
+    const extensionId = 'your_extension_id_here';
+    chrome.management.setEnabled(extensionId, false, function() {
+        if (chrome.runtime.lastError) {
+            alert('Error disabling extension: ' + chrome.runtime.lastError.message);
+        } else {
+            alert('LightSpeedFilter extension has been disabled successfully.');
+        }
+    });
+})();
