@@ -1,6 +1,5 @@
-// This script uses the Chrome Extension API to disable the LightSpeedFilter extension
-const extensionId = 'your_extension_id_here'; // Replace with the actual extension ID
 
+const extensionId = 'your_extension_id_here';
 chrome.management.setEnabled(extensionId, false, function() {
     if (chrome.runtime.lastError) {
         console.error('Error disabling extension:', chrome.runtime.lastError);
